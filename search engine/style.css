@@ -1,0 +1,167 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(248, 130, 130); 
+    
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(140, 93, 242, 0.684); 
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+  p {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+} 
+.red{
+    color: red;
+    
+}
+.blue{
+    color: blue;
+    letter-spacing: 0px;
+}
+
+
+#searchInput {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #e2e2e2;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button styles */
+button {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+}
+
+button#clearHistoryButton {
+    background-color: #dc3545;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button#clearHistoryButton:hover {
+    background-color: #c82333;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Search history list */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+li {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgb(252, 83, 83);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    transition: transform 0.2s ease;
+}
+
+li:hover {
+    transform: translateX(5px);
+}
+
+/* Placeholder for empty search history */
+li.empty-message {
+    text-align: center;
+    color: #888;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: transparent;
+    box-shadow: none;
+}
+/* General delete button styling */
+button.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    width: 60px; /* Fixed width */
+    height: 30px; /* Fixed height */
+    padding: 5px 10px; /* Optional padding to adjust inner space */
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 0.85rem; /* Adjust font size */
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.delete-btn:hover {
+    background-color: #c82333;
+}
+
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    button, #searchInput {
+        font-size: 0.9rem;
+    }
+}
